@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>DP Downloader</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </header>
+    <section>
+        <h1>You Tube Downloader</h1>
+        <div class="link-container">
+            <label for="" class="lbl1">Video link</label>
+            <input type="text" class="link"  name="link"  placeholder="enter the valid link">
+            <label for="" class="lbl2">Format</label>
+            <select name="" id="" class="format" >
+                <option value="mp3">Select video format</option>
+                <option value="mp3">Mp3</option>
+                <option value="mp3">144</option>
+                <option value="mp3">360</option>
+                <option value="mp3">480</option>
+                <option value="mp3">720</option>
+                <option value="mp3">1080</option>
+                <option value="mp3">4k</option>
+                <option value="mp3">8k</option>
+            </select>
+        </div>
+        <div class="button-container">
+            <button class="btn" type="submit" >Start</button>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(".btn").click(function(){
+            // alert('hi');
+            var link=$(".link").val();
+            var format=$(".format").children("option:selected").val();
+            var src="" +link + "=" +format+ "";
+            download(link, format);
+            // console.log(src);
+
+        });
+        function download(link, format){
+            $('.btn').html('<iframe style="height:50px; border:none; overflow:hidden;" src="https://loader.to/api/button/?url='+link + '&f=' +format + '"></iframe>');
+        }
+
+    </script>
+</body>
+</html>

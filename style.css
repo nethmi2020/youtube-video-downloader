@@ -1,0 +1,132 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(209, 209, 209);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background-color: rgb(236, 224, 224);
+    align-items: center;
+}
+
+header h1{
+    border-bottom: 3px solid red;
+}
+header ul li{
+    list-style: none;
+    
+    font-size: 18px;
+    font-weight: bold;
+}
+ul li a{
+    text-decoration: none;
+    border-bottom: 3px solid red;
+}
+
+/* section{
+    display: block;
+   
+    align-items: center;
+    margin: 200px 450px;
+    padding: 20px 55px;
+    border: 1px solid black;
+    background-color: white;
+} */
+
+section{
+    width: 800px;
+    height: 400px;
+    background-color: antiquewhite;
+    /* margin-top: 10px;
+    margin-left: 10px; */
+     position: absolute;
+   top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+
+}
+ section h1{
+font-size: 28px;
+text-align: center;
+padding: 30px;
+margin-bottom: 30px;
+color: rgb(253, 89, 89);
+} 
+
+
+.link, .link-container,  .button-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    width: 500px;
+}
+.lbl1, .lbl2{
+
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: grey;
+}
+.link ,  .format{
+    outline: none;
+    height: 35px;
+    border-radius: 5px;
+    padding: 0 10px;
+    border: 2px solid #666;
+}
+/* .link, .format{
+    width: 100%;
+}
+.link{
+    height: 25px;
+    margin-bottom: 20px;
+}
+.format{
+    height: 25px;
+    margin-bottom: 20px;
+}*/
+
+.btn{
+    height: 50px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: none;
+    color: #fff;
+    background-color: rgb(230, 68, 68);
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:850px) {
+
+    section{
+        width: 500px;
+    }
+    
+    section .link-container, .link, .format, .button-container{
+        width: 300px;
+    }
+    
+}
+
+@media only screen and (max-width:550px) {
+
+    section{
+        margin-top: 50px;
+        width: 350px;
+        height: 450px;
+    }
+    
+    section .link-container,.link, .format, .button-container{
+        width: 300px;
+    }
+    
+}
